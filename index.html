@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador de números</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="container">
+        <img src="images/logo.png" alt="logo">
+        <h1>NUMBERS</h1>
+    </header>
+    <main>
+        <div class="flex">
+            <div class="container-block">
+                <div class="container-text title-style">
+                    <p>ONLINE - GRATUITO</p>
+                    <h1>SORTEADOR DE NÚMEROS</h1>
+                </div>
+                <div class="container-text">
+                    <div id="textOne" class="text-style">
+                        <img src="images/conv.svg" alt="">
+                        <span>Como funciona o sorteador de números?</span>
+                    </div>
+                    <div class="text-small">
+                        <p>O sorteador utiliza um algoritmo de geração aleatória para criar <br> números dentro do
+                            intervalo
+                            especificado pelo usuário.</p>
+                    </div>
+
+                    <div id="textTwo" class="text-style">
+                        <img src="images/conv.svg" alt="">
+                        <span>Posso escolher o intervalo dos números?</span>
+
+                    </div>
+                    <div class="text-small">
+                        <p>Sim, você pode definir os valores mínimo e máximo para o <br> intervalo dos números
+                            sorteados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inputs, toggle e botão inicial -->
+            <div id="parte-direita" class="parte-direita">
+                <div class="part-right">
+                    <h2>QUERO SORTEAR:</h2>
+                    <p>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É
+                        rápido e fácil!</p>
+                </div>
+
+                <div class="flex style-inputs">
+                    <div class="inputs">
+                        <label for="num1">NÚMEROS</label>
+                        <input class="style-input" type="text" id="num1" placeholder="2"
+                            oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    </div>
+                    <div class="inputs">
+                        <label for="num2">DE</label>
+                        <input class="style-input" type="text" id="num2" placeholder="1"
+                            oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    </div>
+                    <div class="inputs">
+                        <label for="num3">ATÉ</label>
+                        <input class="style-input" type="text" id="num3" placeholder="100"
+                            oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    </div>
+                </div>
+
+                <div class="flex margin">
+                    <label class="toggle gap">
+                        <input type="checkbox" id="toggleRepetir">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="margin-left">Não repetir número</span>
+                </div>
+
+                <!-- Resultado e botão sortear/novamente (escondidos até o clique inicial) -->
+                <div id="sorteio-area"
+                    style="display: none; flex-direction: column; align-items: center; gap: 20px; margin-top: 30px;">
+                    <div id="resultado" class="resultado-sorteio"></div>
+                    <button class="submit-style" type="submit" id="sortearBtn">
+                        SORTEAR NOVAMENTE <img src="images/seta.svg" alt="">
+                    </button>
+                </div>
+
+                <!-- Botão inicial -->
+                <div class="margin margin-top">
+                    <button class="submit-style" type="button" id="btnInicial">SORTEAR <img src="images/seta.svg"
+                            alt=""></button>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </main>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
